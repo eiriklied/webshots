@@ -11,7 +11,7 @@ module Webshots
       options_str = str_from_options(options)
 
        # Need to create a temporary file with a png extension that wkhtmltoimage can write to
-      @tmp_file_path = File.dirname(Tempfile.new('screenshot')) + rand_str + '.png'
+      @tmp_file_path = File.join(File.dirname(Tempfile.new('screenshot')), rand_str) + '.png'
       
       cmd = "#{Webshots.executable} #{options_str} #{url} #{@tmp_file_path}"
       system(cmd)
