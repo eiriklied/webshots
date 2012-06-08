@@ -20,7 +20,7 @@ Or install it yourself as:
   
 ### Really simple usage: 
 
-    require './lib/webshots'
+    require 'webshots'
     @png_file = Webshots::Processor.url_to_png 'http://www.google.com'
 
 ### When running integration tests
