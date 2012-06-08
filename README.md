@@ -1,6 +1,8 @@
 # Webshots
 
-TODO: Write a gem description
+Take screen shots of web sites on your headless server! 
+
+Tested on mac and heroku.
 
 ## Installation
 
