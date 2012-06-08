@@ -17,8 +17,19 @@ Or install it yourself as:
     $ gem install webshots
 
 ## Usage
+  
+### Really simple usage: 
 
-TODO: Write usage instructions here
+    require './lib/webshots'
+    @png_file = Webshots::Processor.url_to_png 'http://www.google.com'
+
+### When running integration tests
+
+If you don't want your integration tests to always fetch an image from the internet because its slow or you don't have a connection, you can set Webshots mode to 'test'. This will cause Webshots to always return a static image with dimensions 1024x768 from http://placehold.it
+
+    # Rails example: create a file config/initializers/webshots.rb
+    # The code below will cause Webshots to deliver a static image in test mode
+    Webshots.mode = Rails.env
 
 ## Contributing
 

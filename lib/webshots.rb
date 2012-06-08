@@ -17,4 +17,11 @@ module Webshots
 
     executable = File.absolute_path(File.join(File.dirname(__FILE__), '..', 'bin', executable_file))
   end
+
+  def self.mode=(mode)
+    @mode = mode.to_s
+  end
+  def self.mode
+    @mode
+  end
 end
